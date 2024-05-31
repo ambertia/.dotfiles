@@ -1,0 +1,294 @@
+// Amber's Dotfiles
+//  __      __                     __
+// /\ \  __/\ \                   /\ \
+// \ \ \/\ \ \ \     __     __  __\ \ \____     __     _ __
+//  \ \ \ \ \ \ \  /'__`\  /\ \/\ \\ \ '__`\  /'__`\  /\`'__\
+//   \ \ \_/ \_\ \/\ \L\.\_\ \ \_\ \\ \ \L\ \/\ \L\.\_\ \ \/
+//    \ `\___x___/\ \__/.\_\\/`____ \\ \_,__/\ \__/.\_\\ \_\
+//     '\/__//__/  \/__/\/_/ `/___/> \\/___/  \/__/\/_/ \/_/
+//                              /\___/
+//                              \/__/
+
+//--------------------------------------------------------------------
+// Waybar Common Modules
+//
+// Base module configuration - Waybar config allows include statements
+// that can be used to overwrite select modules as desired
+//
+// Icons are NOT wrapped in a span because I intend to use the proportional variant of a nerd font for both text and icons
+//--------------------------------------------------------------------
+
+// -*- mode: jsonc -*-
+{
+
+    //----------------------------------------------------------------
+    // Hyprland modules
+    //----------------------------------------------------------------
+
+    "hyprland/workspaces": {
+        // "disable-scroll": true,
+        // "all-outputs": true,
+        // "warp-on-scroll": false,
+        "persistent-workspaces": {
+            "*": [1, 2, 3, 4, 5]
+        },
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "󰖟",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "0": "0",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+
+    "hyprland/submap": {
+        "format": "<span style='italic'>{}</span>"
+    },
+
+    "hyprland/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+
+    //----------------------------------------------------------------
+    // General informational widgets / system control
+    //----------------------------------------------------------------
+
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "tooltip": true,
+        "tooltip-format": "Backlight: {percent}%"
+    },
+
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}",
+        "tooltip": true,
+        "tooltip-format": "{capacity}%, {timeTo}",
+        "format-time": "{H} h {m} m",
+        "format-full": "{icon}",
+        "format-charging": "{icon}󱐋",
+        "format-plugged": "{icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["󰂎", "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "interval": 15
+    },
+
+    "clock": {
+        // "timezone": "America/New_York",
+        "format": "{:%H:%M}",
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "format": {
+                "months": "",
+                "today": "<span color='#5bce22'><b>{}</b></span>"
+            }
+        }
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+
+    "mpris": {
+        "format": "{player_icon} {status_icon} {dynamic}",
+        "dynamic-len": 20,
+        "player-icons": {
+            "default": ""
+        },
+        "status-icons": {
+            "playing": "",
+            "paused": ""
+        },
+        "interval": 1
+        // "ignored-players": ["firefox"]
+    },
+
+    // Use the tray applet but install an icon theme that doesn't look ugly
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{icon}",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{essid} ({signalStrength}%)\n{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "󰤮",
+        // "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+        "on-click": "nm-connection-editor"
+    },
+
+    // Needs power-profiles-daemon
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    },
+
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+
+    "wireplumber": {
+        "format": "{icon}   {volume}%",
+        "format-muted": "    {volume}%",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
+        "on-click": "pavucontrol"
+    },
+
+    "custom/wlogout": {
+        "format": "",
+        "on-click": "wlogout",
+        "tooltip-format": "wlogout"
+    },
+
+    //----------------------------------------------------------------
+    // Utility Modules
+    //----------------------------------------------------------------
+
+    "custom/hyprpicker": {
+        "format": "󰈊",
+        "on-click": "hyprpicker --autocopy --format=hex",
+        "tooltip-format": "Hyprpicker"
+    },
+
+    //----------------------------------------------------------------
+    // Hardware monitors
+    //----------------------------------------------------------------
+
+    // Lots of extra formatting just to recreate the functionality of format-icons
+    // memory and disk don't support format-icons for some reason
+
+    "cpu": {
+        "format": "{icon}",
+        "format-icons": ["󰄰", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"],
+        "on-click": "kitty -o font_size=7 btop",
+        "interval": 2
+    },
+
+    "memory": {
+        "format": "{usage}% ",
+        "states": {
+            "0": 0,
+            "1": 11,
+            "2": 22,
+            "3": 33,
+            "4": 44,
+            "5": 55,
+            "6": 66,
+            "7": 77,
+            "8": 88
+        },
+        "format-0": "󰄰",
+        "format-1": "󰪞",
+        "format-2": "󰪟",
+        "format-3": "󰪠",
+        "format-4": "󰪡",
+        "format-5": "󰪢",
+        "format-6": "󰪣",
+        "format-7": "󰪤",
+        "format-8": "󰪥",
+        "on-click": "kitty -o font_size=7 btop",
+        "interval": 2,
+        "tooltip-format": "{used:0.1f}GiB ({percentage}%) used of {total:0.1f}GiB"
+    },
+
+    "temperature": {
+        // "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 70,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{icon}",
+        // First icon is repeated to avoid increasing the thermometer icon
+        // at only 30C or so
+        "format-icons": ["", "", "", "", "", "", ""],
+        "on-click": "kitty -o font_size=7 btop"
+    },
+
+    "disk": {
+        "format": "{percentage_free}% ",
+        "states": {
+            "0": 0,
+            "1": 11,
+            "2": 22,
+            "3": 33,
+            "4": 44,
+            "5": 55,
+            "6": 66,
+            "7": 77,
+            "8": 88
+        },
+        "format-0": "󰄰",
+        "format-1": "󰪞",
+        "format-2": "󰪟",
+        "format-3": "󰪠",
+        "format-4": "󰪡",
+        "format-5": "󰪢",
+        "format-6": "󰪣",
+        "format-7": "󰪤",
+        "format-8": "󰪥",
+        "on-click": "kitty -o font_size=7 btop",
+        "unit": "GB",
+        "tooltip-format": "{specific_used:0.1f} GiB ({percentage_used}%) used of {specific_total:0.1f} GiB on \"{path}\"\n{specific_free:0.1f} GiB ({percentage_free}%) free"
+    },
+
+    // Group the hardware modules for convenience
+    "group/hardware": {
+        "orientation": "inherit",
+        /* "drawer": {
+            "transition-duration": 300,
+            "children-class": "not-memory",
+            "transition-left-to-right": false
+        }, */
+        "modules": [
+            "cpu",
+            "memory",
+            "temperature",
+            "disk"
+        ]
+    },
+
+}

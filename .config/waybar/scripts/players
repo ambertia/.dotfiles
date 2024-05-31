@@ -1,0 +1,38 @@
+#!/bin/bash
+# Amber's Dotfiles
+
+#  __      __                     __                        
+# /\ \  __/\ \                   /\ \                       
+# \ \ \/\ \ \ \     __     __  __\ \ \____     __     _ __  
+#  \ \ \ \ \ \ \  /'__`\  /\ \/\ \\ \ '__`\  /'__`\  /\`'__\
+#   \ \ \_/ \_\ \/\ \L\.\_\ \ \_\ \\ \ \L\ \/\ \L\.\_\ \ \/ 
+#    \ `\___x___/\ \__/.\_\\/`____ \\ \_,__/\ \__/.\_\\ \_\ 
+#     '\/__//__/  \/__/\/_/ `/___/> \\/___/  \/__/\/_/ \/_/ 
+#                              /\___/                       
+#                              \/__/                        
+
+#---------------------------------------------------------------------
+# Waybar Scripts - Player Control
+#
+# Was going to use this to try and stop Firefox from stealing my media
+# keys but I can't find a clean way to integrate it into the Waybar
+# mpris module. Oh well.
+#
+# Script linked in to Hyprland media key binds as well as Waybar modules
+# to issue appropriate playerctl commands
+#---------------------------------------------------------------------
+
+# Comma-separated lists of players in order of priority - see playerctl -l
+# I dislike Firefox (i.e. YouTube) stealing my media keys, so if I'm using
+# a different player such as tidal-hifi for music the commands will be
+# sent in a preferential manner
+PRIORITY_HIGH=
+PRIORITY_LOW=
+
+if [[ "$1" == "--prev" ]]; then
+    playerctl --player=${PRIORITY_HIGH},%any,${PRIORITY_LOW} previous
+elif [[ "$1" == "--toggle" ]]; then
+    playerctl --player=${PRIORITY_HIGH},%any,${PRIORITY_LOW} play-pause
+elif [[ "$1" == "--next" ]]; then
+    playerctl --player=${PRIORITY_HIGH},%any,${PRIORITY_LOW} next
+fi
