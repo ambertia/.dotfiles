@@ -209,6 +209,34 @@
         "interval": 2
     },
 
+    "disk": {
+        "format": "{percentage_free}% ",
+        "states": {
+            "0": 0,
+            "1": 11,
+            "2": 22,
+            "3": 33,
+            "4": 44,
+            "5": 55,
+            "6": 66,
+            "7": 77,
+            "8": 88
+        },
+        "format-0": "󰄰",
+        "format-1": "󰪞",
+        "format-2": "󰪟",
+        "format-3": "󰪠",
+        "format-4": "󰪡",
+        "format-5": "󰪢",
+        "format-6": "󰪣",
+        "format-7": "󰪤",
+        "format-8": "󰪥",
+        "on-click": "kitty -o font_size=7 btop",
+        "unit": "GB",
+        "tooltip-format": "{specific_used:0.1f} GiB ({percentage_used}%) used of {specific_total:0.1f} GiB on \"{path}\"\n{specific_free:0.1f} GiB ({percentage_free}%) free"
+    },
+
+
     "memory": {
         "format": "{usage}% ",
         "states": {
@@ -237,8 +265,8 @@
     },
 
     "temperature": {
-        // "thermal-zone": 2,
-        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "thermal-zone": 0,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 70,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{icon}",
@@ -246,33 +274,6 @@
         // at only 30C or so
         "format-icons": ["", "", "", "", "", "", ""],
         "on-click": "kitty -o font_size=7 btop"
-    },
-
-    "disk": {
-        "format": "{percentage_free}% ",
-        "states": {
-            "0": 0,
-            "1": 11,
-            "2": 22,
-            "3": 33,
-            "4": 44,
-            "5": 55,
-            "6": 66,
-            "7": 77,
-            "8": 88
-        },
-        "format-0": "󰄰",
-        "format-1": "󰪞",
-        "format-2": "󰪟",
-        "format-3": "󰪠",
-        "format-4": "󰪡",
-        "format-5": "󰪢",
-        "format-6": "󰪣",
-        "format-7": "󰪤",
-        "format-8": "󰪥",
-        "on-click": "kitty -o font_size=7 btop",
-        "unit": "GB",
-        "tooltip-format": "{specific_used:0.1f} GiB ({percentage_used}%) used of {specific_total:0.1f} GiB on \"{path}\"\n{specific_free:0.1f} GiB ({percentage_free}%) free"
     },
 
     // Group the hardware modules for convenience
