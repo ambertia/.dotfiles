@@ -1,4 +1,4 @@
 #!/bin/sh
 # Xsetup - run as root before the login dialog appears
 
-sudo /usr/share/sddm/scripts/createRandomSymLinkToWallpaper.sh
+sudo /usr/share/sddm/scripts/copyRandomWallpaper.sh
