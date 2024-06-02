@@ -41,7 +41,8 @@ USER_HOME=$(getent passwd $SUDO_USER | cut -d: -f6) # Thanks to dogbane on stack
 
 echo -e "[${F_BOLD}${C_LIME}Installation${NO_FMT}]: Command line utilities"
 sleep 5
-pacman -S btop neovim ranger sed stow zsh
+pacman -S btop neovim ranger sed stow zsh zsh-autosuggestions zsh-syntax-highlighting
+chsh -s $(which zsh)
 
 #  _  _               _              _    ___
 # | || |_  _ _ __ _ _| |__ _ _ _  __| |  / __|___ _ _ ___
@@ -110,6 +111,7 @@ echo -e "[${F_BOLD}${C_AQUA}Config${NO_FMT}]: Modify SDDM configuration & theme"
 sleep 5
 sh -c "echo -e '[Theme]\nCurrent=corners' > /etc/sddm.conf"
 cp -f sddm/scripts/* /usr/share/sddm/scripts/
+chmod +x /usr/share/sddm/scripts/*
 rm -r /usr/share/sddm/themes/corners/backgrounds
 # Didn't seem to want to link without me removing original directory,
 # even though I used -f

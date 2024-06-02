@@ -28,3 +28,6 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 eval "$(starship init zsh)"
+
+# Created by `pipx` on 2024-06-01 17:52:50
+export PATH="$PATH:/home/amber/.local/bin"
