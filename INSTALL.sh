@@ -84,7 +84,7 @@ runuser -u $SUDO_USER yay -S hyprpicker plymouth-theme-arch-logo pywal-16-colors
 
 echo -e "[${F_BOLD}${C_LIME}Installation${NO_FMT}]: Desktop applications and miscellaneous software"
 sleep 5
-pacman -S cheese file-roller gimp gnome-text-editor inkscape kvantum libreoffice-fresh loupe nwg-look pavucontrol python-pyfiglet qt6ct snapper thunar
+pacman -S cheese file-roller firefox gimp gnome-text-editor inkscape kvantum libreoffice-fresh loupe nwg-look pavucontrol python-pyfiglet qt6ct snapper thunar
 runuser -u $SUDO_USER yay -S tidal-hifi-bin snp
 
 #  ___      _    __ _ _            __   ___  __

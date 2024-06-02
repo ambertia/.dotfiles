@@ -1,5 +1,9 @@
-^/*.md
-^/*.sh
-^/*.txt
-^/*.css
+# Do not copy and md, sh, txt, or css files from the top-level directory
+\/[^\/\n]*\.md
+\/[^\/\n]*\.sh
+\/[^\/\n]*\.txt
+\/[^\/\n]*\.css
+
+# Ignore specific files and directories
 sddm
+.git
