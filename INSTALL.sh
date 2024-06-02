@@ -73,7 +73,7 @@ pacman -S blueman brightnessctl cliphist network-manager-applet polkit-kde-agent
 
 echo -e "[${F_BOLD}${C_LIME}Installation${NO_FMT}]: Desktop accessories, utilities, and customization"
 sleep 5
-pacman -S cutefish-icons grim hypridle hyprlock imagemagick kitty mako plymouth starship swappy ttf-jetbrains-mono-nerd ttf-zed-mono-nerd waybar wofi
+pacman -S cutefish-icons grim hypridle hyprlock imagemagick kitty mako plymouth starship swappy ttf-jetbrains-mono-nerd ttf-iosevka-nerd waybar wofi
 runuser -u $SUDO_USER yay -S hyprpicker plymouth-theme-arch-logo pywal-16-colors sddm-theme-corners-git swww wlogout
 
 
