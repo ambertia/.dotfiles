@@ -1,0 +1,45 @@
+{
+    "explorer.confirmDelete": false,
+    "redhat.telemetry.enabled": false,
+    "git.autofetch": true,
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "git.enableSmartCommit": true,
+    "files.autoSave": "afterDelay",
+    "git.confirmSync": false,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Aura Dark",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.activityBar.location": "hidden",
+    "workbench.colorCustomizations": {
+        "editorSuggestWidget.selectedBackground": "#75307e",
+        "editorStickyScroll.background": "#57245e",
+        "sideBar.background": "#15141b",
+        "list.activeSelectionBackground": "#57245e",
+    },
+
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "none",
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.verticalScrollbarSize": 20,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorSmoothCaretAnimation": "on",
+
+    "editor.fontFamily": "'Iosevka Extended', 'Iosevka Nerd Font Mono'",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true,
+    "editor.lineHeight": 1.5,
+
+    "explorer.confirmDragAndDrop": false,
+    "terminal.integrated.fontFamily": "Iosevka Nerd Font Mono",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.lineHeight": 1.3,
+
+    "editor.stickyScroll.maxLineCount": 2,
+    "workbench.tree.stickyScrollMaxItemCount": 2,
+}
