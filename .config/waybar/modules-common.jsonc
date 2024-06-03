@@ -169,8 +169,8 @@
     },
 
     "wireplumber": {
-        "format": "{icon}   {volume}%",
-        "format-muted": "    {volume}%",
+        "format": "{icon} {volume}%",
+        "format-muted": " {volume}%",
         "format-icons": [
             "",
             "",
