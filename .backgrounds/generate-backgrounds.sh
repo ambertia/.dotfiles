@@ -8,6 +8,6 @@
 # below, although I designed this mainly for my laptop where there will
 # only be one screen with this specific aspect ratio 99.9% of the time.
 
-ASPECT_RATIO = "3:2"
+ASPECT_RATIO="3:2"
 (cd originals && mogrify -gravity center -crop $ASPECT_RATIO +repage -path ../ *.png)
 (cd originals && mogrify -gravity center -crop $ASPECT_RATIO -path ../ *.jpg)
