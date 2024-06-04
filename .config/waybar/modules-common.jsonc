@@ -169,7 +169,7 @@
     },
 
     "custom/updates": {
-        "format": " {}",
+        "format": "{}",
         "exec": "~/.config/waybar/scripts/checkupdates",
         "return-type": "json",
         "interval": "600",

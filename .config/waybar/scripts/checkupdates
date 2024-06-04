@@ -4,6 +4,7 @@
 HIDDEN_THRESHOLD=20
 YELLOW_THRESHOLD=50
 RED_THRESHOLD=100
+SYMBOL=" "
 
 checkupdates 2> /dev/null
 # Only taking the actual list of updatable packages using yay, but using checkupdates to sync the repos
@@ -14,7 +15,11 @@ fi
 
 # Use thresholds to determine what class the module should have
 if [ $UPDATES -lt $HIDDEN_THRESHOLD ]; then
-    STYLE_CLASS="hidden"
+    STYLE_CLASS=""
+    # Change the text elements in order to hide the module - Waybar doesn't
+    # support the css display property
+    SYMBOL=""
+    UPDATES=""
 elif [ $UPDATES -ge $YELLOW_THRESHOLD ]; then
     STYLE_CLASS="yellow"
 elif [ $UPDATES -ge $RED_THRESHOLD ]; then
@@ -24,4 +29,4 @@ else
 fi
 
 # Return in JSON format to enable class usage
-printf '{"text": "%s", "tooltip": "%s updates available", "class": "%s"}' "$UPDATES" "$UPDATES" "$STYLE_CLASS"
+printf '{"text": "%s%s", "tooltip": "%s updates available", "class": "%s"}' "$SYMBOL" "$UPDATES" "$UPDATES" "$STYLE_CLASS"
