@@ -168,6 +168,14 @@
         "spacing": 10
     },
 
+    "custom/updates": {
+        "format": " {}",
+        "exec": "~/.config/waybar/scripts/checkupdates",
+        "return-type": "json",
+        "interval": "600",
+        "on-click": "kitty sudo pacman -Syu"
+    },
+
     "wireplumber": {
         "format": "{icon} {volume}%",
         "format-muted": " {volume}%",

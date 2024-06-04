@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Variables to control various styling options
+HIDDEN_THRESHOLD=20
+YELLOW_THRESHOLD=50
+RED_THRESHOLD=100
+
+checkupdates 2> /dev/null
+# Only taking the actual list of updatable packages using yay, but using checkupdates to sync the repos
+
+if ! UPDATES=$( yay -Qu | wc -l ); then
+    UPDATES=0
+fi
+
+# Use thresholds to determine what class the module should have
+if [ $UPDATES -lt $HIDDEN_THRESHOLD ]; then
+    STYLE_CLASS="hidden"
+elif [ $UPDATES -ge $YELLOW_THRESHOLD ]; then
+    STYLE_CLASS="yellow"
+elif [ $UPDATES -ge $RED_THRESHOLD ]; then
+    STYLE_CLASS="red"
+else
+    STYLE_CLASS=""
+fi
+
+# Return in JSON format to enable class usage
+printf '{"text": "%s", "tooltip": "%s updates available", "class": "%s"}' "$UPDATES" "$UPDATES" "$STYLE_CLASS"
