@@ -9,5 +9,9 @@
 # only be one screen with this specific aspect ratio 99.9% of the time.
 
 ASPECT_RATIO="3:2"
+
+# Convert jpgs to png because hyprlock only supports png at the moment
+(cd originals && mogrify -format png *.jpg)
+
+# Minimally crop to aspect ratio, repage, and put up in the main .backgrounds directory
 (cd originals && mogrify -gravity center -crop $ASPECT_RATIO +repage -path ../ *.png)
-(cd originals && mogrify -gravity center -crop $ASPECT_RATIO -path ../ *.jpg)

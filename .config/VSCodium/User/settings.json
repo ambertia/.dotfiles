@@ -42,4 +42,17 @@
 
     "editor.stickyScroll.maxLineCount": 2,
     "workbench.tree.stickyScrollMaxItemCount": 2,
+    
+    "colorize.include": [
+        "**/*.css",
+        "**/*.scss",
+        "**/*.sass",
+        "**/*.less",
+        "**/*.styl",
+        "**/*"
+    ],
+
+    "colorize.colorized_variables": [
+        "LESS"
+    ]
 }
