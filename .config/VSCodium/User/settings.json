@@ -5,6 +5,7 @@
     "terminal.integrated.defaultProfile.linux": "zsh",
     "git.enableSmartCommit": true,
     "files.autoSave": "afterDelay",
+    "files.trimTrailingWhitespace": true,
     "git.confirmSync": false,
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
@@ -42,7 +43,7 @@
 
     "editor.stickyScroll.maxLineCount": 2,
     "workbench.tree.stickyScrollMaxItemCount": 2,
-    
+
     "colorize.include": [
         "**/*.css",
         "**/*.scss",
