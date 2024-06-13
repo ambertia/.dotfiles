@@ -6,27 +6,33 @@ YELLOW_THRESHOLD=50
 RED_THRESHOLD=100
 SYMBOL=" "
 
-checkupdates 2> /dev/null
-# Only taking the actual list of updatable packages using yay, but using checkupdates to sync the repos
+REPO_UPDATES=$(checkupdates | wc -l)
 
-if ! UPDATES=$( yay -Qu | wc -l ); then
-    UPDATES=0
+if ! AUR_UPDATES=$( yay -Qu | wc -l ); then
+    AUR_UPDATES=0
 fi
 
+TOTAL_UPDATES=$(($REPO_UPDATES + $AUR_UPDATES))
+
+# Test line to check the math
+# printf 'UPDATES: %s, %s, %s\n' $REPO_UPDATES $AUR_UPDATES $TOTAL_UPDATES
+
 # Use thresholds to determine what class the module should have
-if [ $UPDATES -lt $HIDDEN_THRESHOLD ]; then
+if [ $TOTAL_UPDATES -lt $HIDDEN_THRESHOLD ]; then
     STYLE_CLASS=""
     # Change the text elements in order to hide the module - Waybar doesn't
     # support the css display property
     SYMBOL=""
-    UPDATES=""
-elif [ $UPDATES -ge $YELLOW_THRESHOLD ]; then
+    TOTAL_UPDATES=""
+elif [ $TOTAL_UPDATES -ge $YELLOW_THRESHOLD ]; then
     STYLE_CLASS="yellow"
-elif [ $UPDATES -ge $RED_THRESHOLD ]; then
+elif [ $TOTAL_UPDATES -ge $RED_THRESHOLD ]; then
     STYLE_CLASS="red"
 else
     STYLE_CLASS=""
 fi
 
 # Return in JSON format to enable class usage
-printf '{"text": "%s%s", "tooltip": "%s updates available", "class": "%s"}' "$SYMBOL" "$UPDATES" "$UPDATES" "$STYLE_CLASS"
+# TOTAL_UPDATES must be treated as string
+# SYMBOL and TOTAL_UPDATES must have quotes to allow empty strings
+printf '{"text": "%s%s", "tooltip": "%d repo updates available\r%d AUR updates available", "class": "%s"}' "$SYMBOL" "$TOTAL_UPDATES" $REPO_UPDATES $AUR_UPDATES $STYLE_CLASS
