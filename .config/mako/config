@@ -1,2 +1,11 @@
 default-timeout=5000
 ignore-timeout=1
+font=monospace 12
+icon-path=/usr/share/icons/Crule
+
+width=250
+
+background-color=#0d0b0f89
+border-radius=10
+border-color=#4d7090
+progress-color=source #44fc44a0
