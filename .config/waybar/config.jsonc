@@ -38,6 +38,7 @@
 
     "modules-right": [
         "mpris",
+        "idle_inhibitor",
         "custom/updates",
         "wireplumber",
         "group/hardware",

@@ -172,7 +172,7 @@
         "format": "{}",
         "exec": "~/.config/waybar/scripts/checkupdates",
         "return-type": "json",
-        "interval": "600",
+        "interval": "60",
         "on-click": "kitty sudo pacman -Syu"
     },
 
