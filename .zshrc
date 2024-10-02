@@ -27,7 +27,13 @@ source ~/.cache/wal/colors-tty.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# Bind Tab to accept next token of autosuggestion
+bindkey '\t' forward-word
+
 eval "$(starship init zsh)"
 
 # Created by `pipx` on 2024-06-01 17:52:50
 export PATH="$PATH:/home/amber/.local/bin"
+
+# Start with hyfetch
+hyfetch
