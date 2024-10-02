@@ -35,5 +35,9 @@ eval "$(starship init zsh)"
 # Created by `pipx` on 2024-06-01 17:52:50
 export PATH="$PATH:/home/amber/.local/bin"
 
-# Start with hyfetch
-hyfetch
+# Start with hyfetch in Kitty windows (i.e., not VSCode)
+if [[ $TERM == "xterm-kitty" ]]; then
+    hyfetch
+else
+    :
+fi
