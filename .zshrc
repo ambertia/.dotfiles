@@ -37,7 +37,7 @@ export PATH="$PATH:/home/amber/.local/bin"
 
 # Start with hyfetch in Kitty windows (i.e., not VSCode)
 if [[ $TERM == "xterm-kitty" ]]; then
-    hyfetch
+    hyfetch --ascii-file ~/.config/arch-dots
 else
     :
 fi
