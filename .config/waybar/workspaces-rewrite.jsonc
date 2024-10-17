@@ -1,0 +1,64 @@
+// Amber's Dotfiles
+//  __      __                     __
+// /\ \  __/\ \                   /\ \
+// \ \ \/\ \ \ \     __     __  __\ \ \____     __     _ __
+//  \ \ \ \ \ \ \  /'__`\  /\ \/\ \\ \ '__`\  /'__`\  /\`'__\
+//   \ \ \_/ \_\ \/\ \L\.\_\ \ \_\ \\ \ \L\ \/\ \L\.\_\ \ \/
+//    \ `\___x___/\ \__/.\_\\/`____ \\ \_,__/\ \__/.\_\\ \_\
+//     '\/__//__/  \/__/\/_/ `/___/> \\/___/  \/__/\/_/ \/_/
+//                              /\___/
+//                              \/__/
+
+//--------------------------------------------------------------------
+// Waybar Window Rewrites
+//
+// Because of the immediate potential to become cumbersome, the window
+// icon and name rewrite rules are listed here.
+//--------------------------------------------------------------------
+
+// -*- mode: jsonc -*-
+{
+    "hyprland/workspaces": {
+        "window-rewrite": {
+            "class<blueman-manager>": "󰂯",
+            "class<*.alculat.*>": "󰃬", // Should be good catchall for calculators
+            "class<cheese>": "",
+            "class<codium-url-handler>": "",
+            "class<com.github.GradienceTeam.Gradience>": "",
+            "class<discord>": "",
+            "class<draw.io>": "󰙮",
+            "class<firefox>": "󰈹",
+            "class<Gimp.*>": "",
+            "class<kitty>": "",
+            "class<kitty> title<btop>": "󰷜",
+            "class<kitty> title<cava>": "󰥛",
+            "class<kitty> title<cbonsai>": "󰹩",
+            "class<kitty> title<ranger>": "",
+            "class<libreoffice-calc": "󱎏",
+            "class<libreoffice-draw>": "󰝇",
+            "class<libreoffice-impress>": "󱎐",
+            "class<libreoffice-math>": "𝚺",
+            "class<libreoffice-startcenter>": "󰏆",
+            "class<libreoffice-writer>": "󱎒",
+            "class<nm-connection-editor>": "󱚾",
+            "class<nwg-look>": "",
+            "class<org.inkscape.Inkscape>": "",
+            "class<org.gnome.FileRoller>": "",
+            "class<org.gnome.Loupe>": "",
+            "class<org.gnome.Nautilus>": "",
+            "class<org.gnome.TextEditor>": "󱩽",
+            "class<org.keepassxc.KeePassXC>": "󰳌",
+            "class<org.pulseaudio.pavucontrol>": "",
+            "class<qdirstat>": "",
+            "class<steam>": "󰓓",
+            "class<Thunar>": "",
+            "class<thunderbird>": "",
+            "class<tidal-hifi>": "󰫔",
+            "class<vlc>": "󰕼",
+            "class<VSCodium>": "",
+            "class<Xreader>": "󰺅",
+
+            "title<.*youtube.*>": "󰗃",
+        }
+    }
+}

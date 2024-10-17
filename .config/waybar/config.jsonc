@@ -19,7 +19,7 @@
 // -*- mode: jsonc -*-
 {
     // Import my general modules configuration
-    "include": "~/.config/waybar/modules-common.jsonc",
+    "include": ["~/.config/waybar/modules-common.jsonc", "~/.config/waybar/workspaces-rewrite.jsonc"],
 
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)

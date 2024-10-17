@@ -29,25 +29,9 @@
         // "disable-scroll": true,
         // "all-outputs": true,
         // "warp-on-scroll": false,
-        "persistent-workspaces": {
-            "*": [1, 2, 3, 4, 5]
-        },
-        "format": "{icon}",
-        "format-icons": {
-            "1": "",
-            "2": "󰖟",
-            "3": "",
-            "4": "",
-            "5": "",
-            "6": "6",
-            "7": "7",
-            "8": "8",
-            "9": "9",
-            "0": "0",
-            "urgent": "",
-            "focused": "",
-            "default": ""
-        }
+        "format": "{icon}{windows}",
+        "format-window-separator": " ",
+        "window-rewrite-default": "",
     },
 
     "hyprland/submap": {
@@ -127,13 +111,14 @@
         "format": "{player_icon} {status_icon} {dynamic}",
         "dynamic-len": 20,
         "player-icons": {
-            "default": ""
+            "default": "󰫔",
+            "firefox": "󰈹",
         },
         "status-icons": {
             "playing": "",
             "paused": ""
         },
-        "interval": 1
+        "interval": 1,
         // "ignored-players": ["firefox"]
     },
 
