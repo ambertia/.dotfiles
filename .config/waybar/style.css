@@ -1,44 +1,32 @@
 @import url("/home/amber/.cache/wal/colors-waybar.css");
+/* Unfortunately referencing GTK CSS variables makes vscode very angry.
+Lots of red squiggles everywhere 😠*/
 /* TODO Fonts, color variables, etc. in external file to swap quickly? */
 
 * {
-    /* Don't need Font Awesome necessarily; using ZedMono nerd font here */
     font-family: 'Iosevka NFP';
-    font-size: 14px;
+    font-size: 12px;
 }
 
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
-    border-bottom: 3px solid rgba(55, 88, 72, 0.5);
-    color: #ffffff;
-    transition-property: background-color;
-    transition-duration: .5s;
+    background-color: transparent;
+    color: @foreground;
 }
 
 window#waybar.hidden {
     opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-/*
-window#waybar.termite {
-    background-color: #3F3F3F;
+.modules-left,
+.modules-right,
+.modules-center {
+    background-color: @background;
+    border-radius: 15px;
+    padding: 0px 5px;
+    margin: 0px 2px;
 }
 
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
-}
-*/
 button {
     /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
@@ -47,30 +35,16 @@ button {
     border-radius: 0;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-    background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
 #workspaces button {
-    min-width: 20px;
+    border-radius: 10px;
     padding: 0 5px;
-    background-color: transparent;
+    margin: 5px 2px;
+    background-color: @color7;
     color: #ffffff;
 }
 
 #workspaces button.active {
-    box-shadow: inset 0 -3px #f13333;
-}
-
-#workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#workspaces button.focused {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+    background-color: @color6;
 }
 
 #workspaces button.urgent {
@@ -162,16 +136,8 @@ label:focus {
     background-color: #000000;
 }
 
-#cpu {
-    min-width: 30px;
-}
-
-#memory {
-    min-width: 30px;
-}
-
-#disk {
-    min-width: 30px;
+#cpu, #memory, #disk, #temperature {
+    min-width: 15px;
 }
 
 #backlight {
@@ -305,7 +271,4 @@ label:focus {
 
 #privacy-item.audio-out {
     background-color: #0069d4;
-}
-
-#mpris {
 }
