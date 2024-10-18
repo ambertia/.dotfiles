@@ -34,8 +34,9 @@
         "window-rewrite-default": "",
     },
 
-    "hyprland/submap": {
-        "format": "<span style='italic'>{}</span>"
+    "hyprland/window": {
+        "format": "{title}",
+        "icon": true,
     },
 
     "hyprland/scratchpad": {
@@ -108,8 +109,11 @@
     },
 
     "mpris": {
-        "format": "{player_icon} {status_icon} {dynamic}",
+        "format": "{player_icon} {status_icon} {title}",
+        "format-stopped": "<i>No players active...</i>",
+        "tooltip-format": "{title} [{length}]\nby {artist} on {album}",
         "dynamic-len": 20,
+        "max-length": 30,
         "player-icons": {
             "default": "󰫔",
             "firefox": "󰈹",
