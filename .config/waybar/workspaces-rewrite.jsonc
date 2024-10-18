@@ -29,6 +29,7 @@
             "class<draw.io>": "󰙮",
             "class<firefox>": "󰈹",
             "class<Gimp.*>": "",
+            "class<gitg>": "",
             "class<kitty>": "",
             "class<kitty> title<btop.*>": "󰷜",
             "class<kitty> title<cava.*>": "󰥛",
