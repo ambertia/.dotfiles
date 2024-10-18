@@ -30,6 +30,25 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Bind Tab to accept next token of autosuggestion
 bindkey '\t' forward-word
 
+# Custom aliases
+# Change directory and list contents
+cl() {
+    cd $1 && ls -Al
+}
+# From the internet - search manpages for a term
+fman() {
+    man $1 | grep -irn $2 -
+}
+# Gitmoji alias
+gm() {
+    gitmoji commit
+}
+# Commit alias
+gc() {
+    git commit $@
+}
+
+
 eval "$(starship init zsh)"
 
 # Created by `pipx` on 2024-06-01 17:52:50
