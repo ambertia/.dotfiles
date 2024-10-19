@@ -254,21 +254,20 @@ label:focus {
 
 #privacy {
     padding: 0;
-}
-
-#privacy-item {
-    padding: 0 5px;
-    color: white;
+    background-color: transparent;
 }
 
 #privacy-item.screenshare {
-    background-color: #cf5700;
+    color: #cf5700;
 }
 
 #privacy-item.audio-in {
-    background-color: #1ca000;
+    color: #1ca000;
 }
 
 #privacy-item.audio-out {
-    background-color: #0069d4;
+    color: #0069d4;
+}
+
+#cava, #mpris {
 }

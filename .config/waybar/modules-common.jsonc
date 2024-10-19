@@ -152,6 +152,10 @@
       }
     },
 
+    "privacy": {
+        "icon-size": 14,
+    },
+
     "tray": {
         // "icon-size": 21,
         "spacing": 10

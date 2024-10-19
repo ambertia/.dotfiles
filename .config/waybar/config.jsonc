@@ -49,6 +49,7 @@
         "clock",
         "power-profiles-daemon",
         "custom/wlogout",
+        "privacy",
         "tray"
     ],
 
