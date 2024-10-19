@@ -79,25 +79,25 @@
     },
 
     "cava": {
-    	"framerate": 30,
-    	"autosens": 1,
+        "framerate": 30,
+        "autosens": 1,
     	//"sensitivity": 100,
-    	"bars": 20,
-    	"lower_cutoff_freq": 10,
-    	"higher_cutoff_freq": 20000,
-    	"method": "pulse",
-    	"source": "auto",
-    	"stereo": false,
-    	"reverse": false,
-    	"bar_delimiter": 0,
-    	"monstercat": true,
-    	"waves": false,
-    	"noise_reduction": 0.5,
-    	"input_delay": 1,
-    	"format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
-    	"actions": {
-    		"on-click-right": "mode"
-    	}
+        "bars": 20,
+        "lower_cutoff_freq": 10,
+        "higher_cutoff_freq": 20000,
+        "method": "pulse",
+        "source": "auto",
+        "stereo": false,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": true,
+        "waves": false,
+        "noise_reduction": 0.5,
+        "input_delay": 1,
+        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "actions": {
+            "on-click-right": "mode"
+        }
     },
 
     "clock": {
