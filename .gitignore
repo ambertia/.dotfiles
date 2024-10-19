@@ -1,3 +1,4 @@
 .backgrounds/**/*.jpg
 .backgrounds/**/*.png
 *.bak
+.backgrounds/current-wallpaper

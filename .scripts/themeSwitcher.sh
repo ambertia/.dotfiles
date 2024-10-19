@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Update current-wallpaper.png
-cp $1 ~/.backgrounds/current-wallpaper.png
+# Update current-wallpaper
+cp $1 ~/.backgrounds/current-wallpaper
 # Change background
 swww img $1
 # Generate palette
