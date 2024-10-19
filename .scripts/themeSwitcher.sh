@@ -10,3 +10,7 @@ wal -i $1 --cols16 -n --contrast 3 -a 50
 gradience-cli import -p ~/.cache/wal/pywal.json
 # Apply Gradience pallete to GTK theme
 gradience-cli apply -n pywal
+# Run script to apply pywal theme to Mako notifications
+~/.scripts/update-mako-theme.sh
+# Send a notification
+notify-send "Theme updated"
