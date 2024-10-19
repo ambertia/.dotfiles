@@ -94,12 +94,6 @@ button {
     margin-right: 0;
 }
 
-#clock {
-}
-
-#battery {
-}
-
 #battery.warning {
     color: #ffd700
 }
@@ -140,15 +134,6 @@ label:focus {
     min-width: 15px;
 }
 
-#backlight {
-}
-
-#network {
-}
-
-#network.disconnected {
-}
-
 #wireplumber {
     transition: color .25s;
     background-color: transparent;
@@ -173,14 +158,8 @@ label:focus {
     background-color: #ffa000;
 }
 
-#temperature {
-}
-
 #temperature.critical {
     background-color: #eb4d4b;
-}
-
-#tray {
 }
 
 #tray > .passive {
@@ -190,34 +169,6 @@ label:focus {
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
     background-color: #eb4d4b;
-}
-
-/*
-#idle_inhibitor {
-    background-color: #2d3436;
-}
-
-#idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
-}
-*/
-
-#mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
-}
-
-#mpd.disconnected {
-    background-color: #f53c3c;
-}
-
-#mpd.stopped {
-    background-color: #90b1b1;
-}
-
-#mpd.paused {
-    background-color: #51a37a;
 }
 
 #language {
@@ -267,7 +218,4 @@ label:focus {
 
 #privacy-item.audio-out {
     color: #0069d4;
-}
-
-#cava, #mpris {
 }
