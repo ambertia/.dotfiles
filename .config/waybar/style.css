@@ -6,6 +6,7 @@ Lots of red squiggles everywhere 😠*/
 * {
     font-family: 'Iosevka NFP';
     font-size: 12px;
+    transition: all 0.25s;
 }
 
 
@@ -47,6 +48,10 @@ button {
     background-color: @color6;
 }
 
+#workspaces button:hover {
+    background-color: @color9;
+}
+
 #workspaces button.urgent {
     background-color: #eb4d4b;
 }
@@ -58,25 +63,56 @@ button {
 
 #clock,
 #battery,
+#cava,
+#clock,
 #cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#wireplumber,
+#custom-hyprpicker,
 #custom-media,
 #custom-updates,
-#tray,
-#mode,
+#custom-wlogout,
+#disk,
 #idle_inhibitor,
-#scratchpad,
-#power-profiles-daemon,
+#memory,
+#mode,
 #mpd,
-#custom-hyprpicker {
+#mpris,
+#network,
+#power-profiles-daemon,
+#privacy-item,
+#pulseaudio,
+#scratchpad,
+#temperature,
+#tray,
+#wireplumber {
     padding: 0 5px;
     color: #ffffff;
+}
+
+#backlight:hover,
+#battery:hover,
+#cava:hover,
+#clock:hover,
+#cpu:hover,
+#custom-hyprpicker:hover,
+#custom-media:hover,
+#custom-updates:hover,
+#custom-wlogout:hover,
+#disk:hover,
+#idle_inhibitor:hover,
+#memory:hover,
+#mode:hover,
+#mpd:hover,
+#mpris:hover,
+#network:hover,
+#power-profiles-daemon:hover,
+#privacy-item:hover,
+#pulseaudio:hover,
+#scratchpad:hover,
+#temperature:hover,
+#tray:hover,
+#window:hover,
+#wireplumber:hover {
+    color: @color9;
 }
 
 #window,
