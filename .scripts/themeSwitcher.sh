@@ -5,7 +5,7 @@ cp $1 ~/.backgrounds/current-wallpaper.png
 # Change background
 swww img $1
 # Generate palette
-wal -i $1 --cols16 -n --contrast 3 -a 50
+wal -i $1 --cols16 -n --contrast 2 -a 50
 # Prevent duplicate waybar instances from modifications to hyprland.conf colors
 killall waybar
 waybar &
