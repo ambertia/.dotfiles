@@ -8,7 +8,7 @@ SYMBOL=" "
 
 REPO_UPDATES=$(checkupdates | wc -l)
 
-if ! AUR_UPDATES=$( yay -Qu | wc -l ); then
+if ! AUR_UPDATES=$( paru -Qu | wc -l ); then
     AUR_UPDATES=0
 fi
 
