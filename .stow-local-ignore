@@ -1,4 +1,4 @@
-# Do not copy and md, sh, txt, or css files from the top-level directory
+# Do not copy any md, sh, txt, or css files from the top-level directory
 \/[^\/\n]*\.md
 \/[^\/\n]*\.sh
 \/[^\/\n]*\.txt
