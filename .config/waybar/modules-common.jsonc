@@ -218,6 +218,12 @@
         "tooltip-format": "Hyprpicker"
     },
 
+    "custom/qalculate": {
+        "format": "󰃬",
+        "on-click": "qalculate-gtk",
+        "tooltip-format": "Qalculate GTK"
+    },
+
     //----------------------------------------------------------------
     // Hardware monitors
     //----------------------------------------------------------------

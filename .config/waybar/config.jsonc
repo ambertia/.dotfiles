@@ -44,6 +44,7 @@
         "idle_inhibitor",
         "custom/updates",
         "wireplumber",
+        "custom/qalculate",
         "custom/hyprpicker",
         "backlight",
         "battery",
