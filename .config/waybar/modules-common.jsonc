@@ -188,7 +188,7 @@
         "exec": "~/.config/waybar/scripts/checkupdates",
         "return-type": "json",
         "interval": "60",
-        "on-click": "kitty sudo pacman -Syu"
+        "on-click": "kitty paru -Syu"
     },
 
     "wireplumber": {
