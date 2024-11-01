@@ -9,7 +9,6 @@ Lots of red squiggles everywhere 😠*/
     transition: all 0.25s;
 }
 
-
 window#waybar {
     background-color: transparent;
     color: @foreground;
@@ -90,34 +89,6 @@ button {
 #wireplumber {
     padding: 0 5px;
     color: #ffffff;
-}
-
-#backlight:hover,
-#battery:hover,
-#cava:hover,
-#clock:hover,
-#cpu:hover,
-#custom-hyprpicker:hover,
-#custom-media:hover,
-#custom-qalculate:hover,
-#custom-updates:hover,
-#custom-wlogout:hover,
-#disk:hover,
-#idle_inhibitor:hover,
-#memory:hover,
-#mode:hover,
-#mpd:hover,
-#mpris:hover,
-#network:hover,
-#power-profiles-daemon:hover,
-#privacy-item:hover,
-#pulseaudio:hover,
-#scratchpad:hover,
-#temperature:hover,
-#tray:hover,
-#window:hover,
-#wireplumber:hover {
-    color: @color9;
 }
 
 #window,
@@ -259,4 +230,32 @@ label:focus {
 
 #privacy-item.audio-out {
     color: #0069d4;
+}
+
+#backlight:hover,
+#battery:hover,
+#cava:hover,
+#clock:hover,
+#cpu:hover,
+#custom-hyprpicker:hover,
+#custom-media:hover,
+#custom-qalculate:hover,
+#custom-updates:hover,
+#custom-wlogout:hover,
+#disk:hover,
+#idle_inhibitor:hover,
+#memory:hover,
+#mode:hover,
+#mpd:hover,
+#mpris:hover,
+#network:hover,
+#power-profiles-daemon:hover,
+#privacy-item:hover,
+#pulseaudio:hover,
+#scratchpad:hover,
+#temperature:hover,
+#tray:hover,
+#window:hover,
+#wireplumber:hover {
+    color: @color9;
 }
