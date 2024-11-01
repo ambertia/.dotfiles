@@ -39,6 +39,12 @@ cl() {
 fman() {
     man $1 | grep -irn $2 -
 }
+gits() {
+    git status
+}
+gd() {
+    git diff $@
+}
 # Gitmoji alias
 gm() {
     gitmoji commit
