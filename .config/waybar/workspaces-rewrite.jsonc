@@ -36,6 +36,8 @@
             "class<kitty> title<cava.*>": "󰥛",
             "class<kitty> title<cbonsai.*>": "󰹩",
             "class<kitty> title<neo-matrix.*>": "󰘨",
+	    "class<kitty> title<*.pacman.*>": "",
+	    "class<kitty> title<*.paru.*>": "",
             "class<kitty> title<ranger.*>": "",
             "class<libreoffice-calc": "󱎏",
             "class<libreoffice-draw>": "󰝇",
