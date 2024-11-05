@@ -29,9 +29,13 @@
         // "disable-scroll": true,
         // "all-outputs": true,
         // "warp-on-scroll": false,
-        "format": "{icon}{windows}",
+        "format": "{icon} {windows}",
+        "format-icons": {
+            "special": "",
+        },
         "format-window-separator": " ",
         "window-rewrite-default": "",
+        "show-special": true,
     },
 
     "hyprland/window": {
