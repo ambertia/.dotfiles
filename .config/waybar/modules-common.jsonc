@@ -144,7 +144,7 @@
         "max-length": 30,
         "player-icons": {
             "default": "󰫔",
-            "firefox": "󰈹",
+            "firefox": "󰰸",
         },
         "status-icons": {
             "playing": "",
