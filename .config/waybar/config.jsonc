@@ -37,7 +37,8 @@
 
     "modules-center": [
         "mpris",
-        "cava" // TODO waybar-cava (AUR) required for this, or replace with custom script-based module.
+        "cava", // TODO waybar-cava (AUR) required for this, or replace with custom script-based module.
+        "custom/cava"
     ],
 
     "modules-right": [

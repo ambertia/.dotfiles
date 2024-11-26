@@ -82,6 +82,8 @@
         "interval": 15
     },
 
+    // DEPRECATED - Cava module doesn't work by default for me, so it's done by a custom script
+    /*
     "cava": {
         "framerate": 30,
         "autosens": 1,
@@ -102,6 +104,13 @@
         "actions": {
             "on-click-right": "mode"
         }
+    },
+    */
+
+    "custom/cava": {
+        "format": "{}",
+        "exec": "~/.scripts/cava.sh",
+        "on-click": "playerctl play-pause"
     },
 
     "clock": {
