@@ -110,7 +110,8 @@
     "custom/cava": {
         "format": "{}",
         "exec": "~/.scripts/cava.sh",
-        "on-click": "playerctl play-pause"
+        "on-click": "playerctl play-pause",
+        "tooltip": false,
     },
 
     "clock": {
