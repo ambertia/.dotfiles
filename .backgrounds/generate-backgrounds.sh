@@ -10,6 +10,12 @@
 
 ASPECT_RATIO="3:2"
 
+# Remove all files in originals/
+rm -f originals/*
+
+# Retreive images from all URLs in sources.txt and store in originals/
+wget --input-file=sources.txt --directory-prefix=originals
+
 # Convert jpgs to png because hyprlock only supports png at the moment
 (cd originals && mogrify -format png *.jpg)
 
