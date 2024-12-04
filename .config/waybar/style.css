@@ -21,7 +21,7 @@ window#waybar.hidden {
 .modules-left,
 .modules-right,
 .modules-center {
-    background-color: @background;
+    background-color: alpha(@background, 0.6);
     border-radius: 15px;
     padding: 0px 5px;
     margin: 0px 2px;
