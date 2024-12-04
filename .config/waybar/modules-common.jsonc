@@ -128,7 +128,7 @@
 
     "idle_inhibitor": {
         "format": "{icon}",
-        "tooltip-format-activated": "Idle inhibitor is activate",
+        "tooltip-format-activated": "Idle inhibitor is active",
         "tooltip-format-deactivated": "Idle inhibitor is inactive",
         "format-icons": {
             "activated": "",
