@@ -48,6 +48,7 @@
         "custom/qalculate",
         "custom/hyprpicker",
         "backlight",
+        "custom/power",
         "battery",
         "clock",
         "power-profiles-daemon",

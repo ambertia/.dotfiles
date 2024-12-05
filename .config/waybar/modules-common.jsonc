@@ -177,6 +177,14 @@
         "on-click": "nm-connection-editor"
     },
 
+    "custom/power": {
+        "format": "{icon}",
+        "exec": "~/.scripts/waybar-battery-discharge.sh",
+        "return-type": "json",
+        "interval": 2,
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+    },
+
     // Needs power-profiles-daemon
     "power-profiles-daemon": {
         "format": "{icon}",
