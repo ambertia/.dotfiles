@@ -32,12 +32,11 @@
     "modules-left": [
         "hyprland/workspaces",
         "hyprland/window",
-        "group/hardware",
+        "group/hardware"
     ],
 
     "modules-center": [
         "mpris",
-        "cava", // TODO waybar-cava (AUR) required for this, or replace with custom script-based module.
         "custom/cava"
     ],
 
@@ -55,5 +54,5 @@
         "tray"
     ],
 
-    "reload_style_on_change": true,
+    "reload_style_on_change": true
 }
