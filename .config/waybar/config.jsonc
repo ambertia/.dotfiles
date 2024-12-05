@@ -48,10 +48,8 @@
         "custom/qalculate",
         "custom/hyprpicker",
         "backlight",
-        "custom/power",
-        "battery",
+        "group/power",
         "clock",
-        "power-profiles-daemon",
         "custom/wlogout",
         "privacy",
         "tray"

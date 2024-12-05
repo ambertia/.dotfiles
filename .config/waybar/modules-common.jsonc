@@ -79,7 +79,7 @@
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["󰂎", "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-        "interval": 15
+        "interval": 2
     },
 
     // DEPRECATED - Cava module doesn't work by default for me, so it's done by a custom script
@@ -188,11 +188,11 @@
     // Needs power-profiles-daemon
     "power-profiles-daemon": {
         "format": "{icon}",
-        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip-format": "Power profile: {profile}",
         "tooltip": true,
         "format-icons": {
-            "default": "",
-            "performance": "",
+            "default": "󰓅",
+            "performance": "󰓅",
             "balanced": "",
             "power-saver": ""
         }
@@ -230,6 +230,16 @@
         "format": "",
         "on-click": "wlogout",
         "tooltip-format": "wlogout"
+    },
+
+    // Group power and battery modules
+    "group/power": {
+        "orientation": "inherit",
+        "modules": [
+            "custom/power",
+            "battery",
+            "power-profiles-daemon"
+        ]
     },
 
     //----------------------------------------------------------------

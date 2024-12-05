@@ -121,25 +121,6 @@ button {
     background-color: #26a65b;
 }
 
-#power-profiles-daemon {
-    padding-right: 15px;
-}
-
-#power-profiles-daemon.performance {
-    background-color: #f53c3c;
-    color: #ffffff;
-}
-
-#power-profiles-daemon.balanced {
-    background-color: #2980b9;
-    color: #ffffff;
-}
-
-#power-profiles-daemon.power-saver {
-    background-color: #2ecc71;
-    color: #000000;
-}
-
 label:focus {
     background-color: #000000;
 }
@@ -232,6 +213,24 @@ label:focus {
 
 #privacy-item.audio-out {
     color: #0069d4;
+}
+
+#power-profiles-daemon {
+    padding-left: 0;
+    background-color: transparent;
+}
+
+#power-profiles-daemon.performance {
+    color: #eb4d4b;
+}
+
+#power-profiles-daemon.power-saver {
+    color: #26a65b;
+}
+
+#custom-power {
+    margin-right: 0px;
+    padding-right: 0;
 }
 
 #backlight:hover,
