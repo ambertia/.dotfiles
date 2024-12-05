@@ -3,6 +3,18 @@
 Lots of red squiggles everywhere 😠*/
 /* TODO Fonts, color variables, etc. in external file to swap quickly? */
 
+/*--------------------------------------------------------------------
+VARIABLES / METADATA - Includes GTK CSS @define-color tags
+--------------------------------------------------------------------*/
+
+@define-color red-soft #eb4d4b;
+@define-color red-sharp #f51c1c;
+@define-color green-soft #26a65b;
+
+/*--------------------------------------------------------------------
+GENERAL SETTINGS
+--------------------------------------------------------------------*/
+
 * {
     font-family: 'Iosevka NFP';
     font-size: 12px;
@@ -35,35 +47,10 @@ button {
     border-radius: 0;
 }
 
-#workspaces button {
-    border-radius: 10px;
-    padding: 0 5px;
-    margin: 5px 2px;
-    background-color: @color7;
-    color: #ffffff;
+label:focus {
+    background-color: #000000;
 }
 
-#workspaces button.active {
-    background-color: @color6;
-}
-
-#workspaces button:hover {
-    background-color: @color9;
-}
-
-#workspaces button.urgent {
-    background-color: #eb4d4b;
-}
-
-#mode {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-}
-#idle_inhibitor.activated {
-    color: #eb4d4b;
-}
-
-#clock,
 #battery,
 #cava,
 #clock,
@@ -93,6 +80,30 @@ button {
     color: #ffffff;
 }
 
+/*--------------------------------------------------------------------
+MODULE SETTINGS - Hyprland modules
+--------------------------------------------------------------------*/
+
+#workspaces button {
+    border-radius: 10px;
+    padding: 0 5px;
+    margin: 5px 2px;
+    background-color: @color7;
+    color: #ffffff;
+}
+
+#workspaces button.active {
+    background-color: @color6;
+}
+
+#workspaces button:hover {
+    background-color: @color9;
+}
+
+#workspaces button.urgent {
+    background-color: @red-soft;
+}
+
 #window,
 #workspaces {
     margin: 0 4px;
@@ -108,12 +119,20 @@ button {
     margin-right: 0;
 }
 
+/*--------------------------------------------------------------------
+MODULE SETTINGS - General informational widgets / system control
+--------------------------------------------------------------------*/
+
+#battery {
+    padding: 3px;
+}
+
 #battery.warning {
     color: #ffd700
 }
 
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
+    background-color: @red-sharp;
     color: #ffffff;
 }
 
@@ -121,62 +140,11 @@ button {
     background-color: #26a65b;
 }
 
-label:focus {
-    background-color: #000000;
-}
-
-#cpu, #memory, #disk, #temperature {
-    min-width: 15px;
-}
-
-#wireplumber {
-    transition: color .25s;
-    background-color: transparent;
-    color: #ffffff;
-}
-
-#wireplumber.muted {
-    color: #cc2014;
-}
-
-#custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 80px;
-}
-
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-    background-color: #ffa000;
-}
-
-#temperature.critical {
-    background-color: #eb4d4b;
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
-}
-
-#language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
+#idle_inhibitor.activated {
+    color: @red-soft;
 }
 
 #keyboard-state {
-    background: #97e1ad;
-    color: #000000;
     padding: 0 0px;
     margin: 0 5px;
     min-width: 16px;
@@ -190,12 +158,21 @@ label:focus {
     background: rgba(0, 0, 0, 0.2);
 }
 
-#scratchpad {
-    background: rgba(0, 0, 0, 0.2);
+#custom-power {
+    padding-right: 3px;
 }
 
-#scratchpad.empty {
-	background-color: transparent;
+#power-profiles-daemon {
+    padding-left: 4px;
+    background-color: transparent;
+}
+
+#power-profiles-daemon.performance {
+    color: @red-soft;
+}
+
+#power-profiles-daemon.power-saver {
+    color: @green-soft;
 }
 
 #privacy {
@@ -215,24 +192,42 @@ label:focus {
     color: #0069d4;
 }
 
-#power-profiles-daemon {
-    padding-left: 0;
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @red-soft;
+}
+
+#wireplumber {
+    transition: color .25s;
     background-color: transparent;
+    color: #ffffff;
 }
 
-#power-profiles-daemon.performance {
-    color: #eb4d4b;
+#wireplumber.muted {
+    color: @red-sharp;
 }
 
-#power-profiles-daemon.power-saver {
-    color: #26a65b;
+/*--------------------------------------------------------------------
+MODULE SETTINGS - Hardware monitors
+--------------------------------------------------------------------*/
+
+#cpu, #memory, #disk, #temperature {
+    min-width: 15px;
 }
 
-#custom-power {
-    margin-right: 0px;
-    padding-right: 0;
+#temperature.critical {
+    background-color: @red-soft;
 }
 
+/*--------------------------------------------------------------------
+EMBELLISHMENTS
+--------------------------------------------------------------------*/
+/* Add the color on hover attribute to all modules at the end so it doesn't get
+overruled by earlier "color" attribute */
 #backlight:hover,
 #battery:hover,
 #cava:hover,
