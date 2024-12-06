@@ -128,7 +128,7 @@ MODULE SETTINGS - General informational widgets / system control
 }
 
 #battery.warning {
-    color: #ffd700
+    color: gold;
 }
 
 #battery.critical:not(.charging) {
@@ -175,7 +175,7 @@ MODULE SETTINGS - General informational widgets / system control
 }
 
 #power-profiles-daemon {
-    padding-left: 4px;
+    padding-left: 3px;
     background-color: transparent;
 }
 
@@ -238,6 +238,7 @@ MODULE SETTINGS - Hardware monitors
 /*--------------------------------------------------------------------
 EMBELLISHMENTS
 --------------------------------------------------------------------*/
+
 /* Add the color on hover attribute to all modules at the end so it doesn't get
 overruled by earlier "color" attribute */
 #backlight:hover,
