@@ -27,7 +27,7 @@ if [ "$power_now" -ge "$power_max" ]; then
     echo $power_now > $POWER_MAX_CACHE
 fi
 
-# Do some funky math to allow printing "decimal" numbers using only integers
+# Do some funky math to allow printing decimal numbers using only integer variables
 power_now_whole=$(( $power_now / 1000000 ))
 power_now_frac=$(( ( $power_now % 1000000 ) / 10000 ))
 
@@ -35,6 +35,19 @@ power_max_whole=$(( $power_max / 1000000 ))
 power_max_frac=$(( ( $power_max % 1000000 ) / 10000 ))
 
 # Calculate the power_now percentage relative to power_max
-# Dividing the divisor by 100 gives an accurate percentage via pure integer math
+# Dividing the divisor by 100 first gives an accurate percentage via pure integer math
 percentage=$(( $power_now / $(( $power_max / 100 )) ))
-printf '{"tooltip": "%d.%dW of %d.%dW max", "percentage": %s}' $power_now_whole $power_now_frac $power_max_whole $power_max_frac $percentage
+
+# Determine the application of style classes for coloring the bar
+if [ $percentage -le 25 ]; then
+    STYLE_CLASS="blue-soft"
+elif [ $percentage -ge 90 ]; then
+    STYLE_CLASS="red-soft"
+elif [ $percentage -ge 80 ]; then
+    STYLE_CLASS="yellow"
+else
+    STYLE_CLASS=""
+fi
+
+# Return data to Waybar in JSON
+printf '{"tooltip": "%d.%dW of %d.%dW max", "percentage": %d, "class": "%s"}' $power_now_whole $power_now_frac $power_max_whole $power_max_frac $percentage $STYLE_CLASS

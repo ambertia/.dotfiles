@@ -162,6 +162,18 @@ MODULE SETTINGS - General informational widgets / system control
     padding-right: 3px;
 }
 
+#custom-power.red-soft {
+    color: @red-soft;
+}
+
+#custom-power.yellow {
+    color: gold;
+}
+
+#custom-power.blue-soft {
+    color: teal;
+}
+
 #power-profiles-daemon {
     padding-left: 4px;
     background-color: transparent;
