@@ -162,17 +162,15 @@ MODULE SETTINGS - General informational widgets / system control
     padding-right: 3px;
 }
 
-#custom-power.red-soft {
-    color: @red-soft;
-}
+/* This is ugly but coloring the module using a span in the script makes
+ the coloring on hover not work */
 
-#custom-power.yellow {
-    color: gold;
-}
-
-#custom-power.blue-soft {
-    color: teal;
-}
+#custom-power.discharging-low { color: #008080; }
+#custom-power.charging-low { color: #007f3b; }
+#custom-power.discharging-med { color: #ffd700; }
+#custom-power.charging-med { color: #87cefa; }
+#custom-power.discharging-high { color: #eb4d4b; }
+#custom-power.charging-high { color: #00ffff; }
 
 #power-profiles-daemon {
     padding-left: 3px;
