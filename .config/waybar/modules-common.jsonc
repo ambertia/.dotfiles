@@ -63,7 +63,7 @@
         },
         "format": "{icon}",
         "tooltip": true,
-        "tooltip-format": "{capacity}%, {timeTo}",
+        "tooltip-format": "{capacity}%, {timeTo}\r{cycles} cycles, {health}% health",
         "format-time": "{H} h {m} m",
         "format-full": "{icon}",
         "format-charging": "{icon}󱐋",
