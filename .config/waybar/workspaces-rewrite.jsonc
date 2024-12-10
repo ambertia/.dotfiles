@@ -32,6 +32,7 @@
             "class<firefox>": "󰈹",
             "class<Gimp.*>": "",
             "class<gitg>": "",
+            "class<gnome-disks>": "󰋊",
             "class<kitty>": "",
             "class<kitty> title<btop.*>": "󰷜",
             "class<kitty> title<cava.*>": "󰥛",
