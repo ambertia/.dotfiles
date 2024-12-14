@@ -13,8 +13,8 @@
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
 
     "window.zoomLevel": 1,
-    "workbench.colorTheme": "Aura Dark",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Catppuccin Macchiato",
+    "workbench.iconTheme": "catppuccin-macchiato",
     "workbench.activityBar.location": "hidden",
     "workbench.colorCustomizations": {
         "editorSuggestWidget.selectedBackground": "#75307e",
@@ -22,8 +22,6 @@
         "sideBar.background": "#15141b",
         "list.activeSelectionBackground": "#57245e",
     },
-
-    "editor.minimap.enabled": false,
     "editor.renderWhitespace": "none",
     "editor.scrollbar.horizontal": "hidden",
     "editor.scrollbar.vertical": "hidden",
@@ -55,5 +53,18 @@
 
     "colorize.colorized_variables": [
         "LESS"
-    ]
+    ],
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.minimap.size": "fill",
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.renderCharacters": false,
+
+    "files.readonlyInclude": {
+        "**/.cargo/registry/src/**/*.rs": true,
+        "**/lib/rustlib/src/rust/library/**/*.rs": true,
+    },
+    "catppuccin-icons.associations.extensions": {
+        "ui": "xml",
+    },
+    "indentRainbow.errorColor": "",
 }
