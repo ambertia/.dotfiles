@@ -88,7 +88,8 @@ MODULE SETTINGS - Hyprland modules
     border-radius: 10px;
     padding: 0 5px;
     margin: 5px 2px;
-    background-color: @color7;
+    box-shadow: 0 0 0 1px @color6;
+    background-color: transparent;
     color: #ffffff;
 }
 
@@ -98,10 +99,12 @@ MODULE SETTINGS - Hyprland modules
 
 #workspaces button:hover {
     background-color: @color9;
+    box-shadow: none;
 }
 
 #workspaces button.urgent {
     background-color: @red-soft;
+    box-shadow: 0 0 0 1px #ffffff;
 }
 
 #window,
