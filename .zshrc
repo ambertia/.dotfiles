@@ -68,8 +68,21 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 export PATH="$PATH:/home/amber/.local/bin"
 
 # Start with hyfetch in Kitty windows (i.e., not VSCode)
+# This makes the prompt jump when using p10k instant prompt. I don't mind
+# because it's fast enough that if I know what I'm typing when I open the
+# terminal I've only typed a character or two.
 if [[ $TERM == "xterm-kitty" ]]; then
-    hyfetch --ascii-file ~/.config/arch-dots-text
+    hyfetch --ascii-file ~/.config/arch-dots-text \
+        -p $(shuf -e -n 1 \
+        transgender \
+        nonbinary \
+        demigirl \
+        lesbian \
+        progress \
+        rainbow \
+        bisexual \
+        pansexual \
+        old-polyam)
 else
     :
 fi
