@@ -1,3 +1,23 @@
+# Start with hyfetch in Kitty windows (i.e., not VSCode)
+# This makes the prompt jump when using p10k instant prompt. I don't mind
+# because it's fast enough that if I know what I'm typing when I open the
+# terminal I've only typed a character or two.
+if [[ $TERM == "xterm-kitty" ]]; then
+    hyfetch --ascii-file ~/.config/arch-dots-text \
+        -p $(shuf -e -n 1 \
+        transgender \
+        nonbinary \
+        demigirl \
+        lesbian \
+        progress \
+        rainbow \
+        bisexual \
+        pansexual \
+        old-polyam)
+else
+    :
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -66,26 +86,6 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # Created by `pipx` on 2024-06-01 17:52:50
 export PATH="$PATH:/home/amber/.local/bin"
-
-# Start with hyfetch in Kitty windows (i.e., not VSCode)
-# This makes the prompt jump when using p10k instant prompt. I don't mind
-# because it's fast enough that if I know what I'm typing when I open the
-# terminal I've only typed a character or two.
-if [[ $TERM == "xterm-kitty" ]]; then
-    hyfetch --ascii-file ~/.config/arch-dots-text \
-        -p $(shuf -e -n 1 \
-        transgender \
-        nonbinary \
-        demigirl \
-        lesbian \
-        progress \
-        rainbow \
-        bisexual \
-        pansexual \
-        old-polyam)
-else
-    :
-fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
