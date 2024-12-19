@@ -18,5 +18,5 @@ gradience-cli apply -n pywal
 # Send a notification
 notify-send "Theme updated"
 # Prevent duplicate waybar instances from modifications to hyprland.conf colors
-killall waybar && waybar &
+killall waybar && killall cava && waybar &
 
