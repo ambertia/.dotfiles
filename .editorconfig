@@ -16,8 +16,14 @@ indent_style = space
 indent_size = 4
 trim_trailing_whitespace = true
 
+[*.html]
+indent_size = 2
+
 [*.{js,ts,jsx,tsx}]
 indent_size = 2
 
 [*.xml]
 indent_size = 2
+
+[*.py]
+quote_type = double
