@@ -108,3 +108,6 @@ _fzf_compgen_dir() {
 
 # Set theme for bat
 export BAT_THEME="Catppuccin Macchiato"
+#
+# Source fzf-git shell script
+source ~/.scripts/fzf-git.sh`
