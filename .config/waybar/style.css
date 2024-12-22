@@ -141,6 +141,7 @@ MODULE SETTINGS - General informational widgets / system control
 
 #battery.charging, #battery.plugged {
     background-color: #26a65b;
+    color: #ffffff;
 }
 
 #idle_inhibitor.activated {
