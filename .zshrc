@@ -138,6 +138,7 @@ _fzf_compgen_dir() {
 
 # Command options for ctrl-t and alt-c operations
 show_file_or_dir_preview="if [ -d {} ]; then eza --tree --level 3 --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
+export FZF_DEFAULT_OPTS="--preview '$show_file_or_dir_preview'"
 export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --level 3 --color=always {} | head -200'"
 
@@ -150,7 +151,7 @@ _fzf_comprun() {
         cd)             fzf --preview "eza --tree --level 4 --color=always {} | head -200" "$@" ;;
         export|unset)   fzf --preview "eval 'echo \$' {}" "$@" ;;
         ssh)            fzf --preview "dig {}" "@" ;;
-        *)              fzf --preview "--preview 'bat -n --color=always --line-range :500 {}'" "$@" ;;
+        *)              fzf --preview "$show_file_or_dir_preview" "$@" ;;
     esac
 }
 
