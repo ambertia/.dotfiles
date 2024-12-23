@@ -103,6 +103,10 @@ gm() {
 gc() {
     git commit $@
 }
+# Use default vscode command as an alias for vscodium
+code() {
+    vscodium .
+}
 # --------------------------------------------------------------------
 
 
