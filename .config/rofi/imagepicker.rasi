@@ -1,0 +1,43 @@
+configuration {
+    modi: "dmenu";
+    show-icons: true;
+}
+
+@theme "~/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+    background: transparent;
+}
+
+window {
+    width: 700px;
+}
+
+listview {
+    columns: 3;
+    scrollbar: true;
+    spacing: 10px;
+    padding: 10px;
+    dynamic: true;
+    fixed-height: true;
+    lines: 3;
+}
+
+inputbar {
+    children: [ "prompt", "entry" ];
+}
+
+element {
+    orientation: vertical;
+    padding: 5px;
+}
+
+element-icon {
+    size: 10em;
+    margin: -30px 0;
+}
+
+element-text {
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}

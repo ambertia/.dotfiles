@@ -1,7 +1,12 @@
 #!/bin/bash
 
-BACKGROUND_PATH=${1}
-echo $BACKGROUND_PATH
+local BACKGROUND_PATH
+FILE_NAME=$($HOME/.scripts/wallpaper-launcher.sh)
+RETURN_STATUS=$?
+BACKGROUND_PATH="${HOME}/.backgrounds/${FILE_NAME}"
+if [ $RETURN_STATUS -eq 1 ]; then
+    exit
+fi
 
 # Update current-wallpaper
 cp $BACKGROUND_PATH $HOME/.backgrounds/current-wallpaper
@@ -15,8 +20,9 @@ gradience-cli import -p ~/.cache/wal/pywal.json
 gradience-cli apply -n pywal
 # Run script to apply pywal theme to Mako notifications
 ~/.scripts/update-mako-theme.sh
+# Prevent duplicate waybar instances from modifications to hyprland.conf colors
+sleep 2
+killall waybar && killall cava && waybar &
 # Send a notification
 notify-send "Theme updated"
-# Prevent duplicate waybar instances from modifications to hyprland.conf colors
-killall waybar && killall cava && waybar &
 
