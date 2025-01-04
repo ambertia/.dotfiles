@@ -1,7 +1,17 @@
 #!/bin/bash
 
 local BACKGROUND_PATH
-FILE_NAME=$($HOME/.scripts/wallpaper-launcher.sh)
+FILE_NAME=$(\
+    find "${HOME}/.backgrounds/" \
+        -maxdepth 1 \
+        -type f \( -iname "*.png" \) \
+        -exec basename {} \; | \
+    sort | \
+    while read -r A; do \
+        echo -en "$A\x00icon\x1f"".backgrounds/$A\n" ; \
+    done | \
+    rofi -dmenu -p "~/.backgrounds/" -config ${HOME}/.config/rofi/imagepicker.rasi
+)
 RETURN_STATUS=$?
 BACKGROUND_PATH="${HOME}/.backgrounds/${FILE_NAME}"
 if [ $RETURN_STATUS -eq 1 ]; then
