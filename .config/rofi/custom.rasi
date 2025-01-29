@@ -1,0 +1,21 @@
+/* The entire purpose of this file is to deal with pywal16 custom templates
+seeming to be broken again. Otherwise I would just make these modifications in
+a custom template. Yes, it's stupid. */
+
+@theme "~/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+    background: transparent;
+}
+
+window {
+    background-color: #03030355;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
+
+element-icon {
+    size: 1.5em;
+}

@@ -150,4 +150,4 @@ display-drun: "Applications";
   }
 }
 
-@theme "~/.cache/wal/colors-rofi-dark.rasi"
+@theme "custom.rasi"
