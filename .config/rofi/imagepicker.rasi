@@ -6,7 +6,6 @@ configuration {
 @theme "~/.config/rofi/custom.rasi"
 
 * {
-    background: transparent;
 }
 
 window {
@@ -15,12 +14,10 @@ window {
 
 listview {
     columns: 3;
-    scrollbar: true;
     spacing: 10px;
-    padding: 10px;
     dynamic: true;
-    fixed-height: true;
     lines: 3;
+    flow: horizontal;
 }
 
 inputbar {
@@ -29,7 +26,7 @@ inputbar {
 
 element {
     orientation: vertical;
-    padding: 5px;
+    padding: 10px;
 }
 
 element-icon {
@@ -38,6 +35,5 @@ element-icon {
 }
 
 element-text {
-    vertical-align: 0.5;
     horizontal-align: 0.5;
 }

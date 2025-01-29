@@ -10,6 +10,28 @@ a custom template. Yes, it's stupid. */
 
 window {
     background-color: #03030355;
+    border: 5px;
+    border-color: @selected-urgent-background;
+    border-radius: 20px;
+    padding: 0;
+    width: 700px;
+}
+
+inputbar {
+    padding: 10px;
+}
+
+listview {
+    fixed-height: true;
+    lines: 10;
+    padding: 10px;
+    spacing: 2px;
+    scrollbar: true;
+}
+
+element {
+    border-radius: 20px;
+    padding: 5px;
 }
 
 element-text {
@@ -18,4 +40,13 @@ element-text {
 
 element-icon {
     size: 1.5em;
+}
+
+scrollbar {
+    background-color: #03030399;
+    border-radius: 5px;
+    handle-color: @active-background;
+    handle-width: 10px;
+    width: 10px;
+    margin: 5px;
 }
