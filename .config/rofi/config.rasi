@@ -1,6 +1,6 @@
 configuration {
 modes: "window,drun,run,combi";
-font: "Iosevka NF 12";
+font: "Iosevka NF 16";
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
@@ -40,11 +40,11 @@ combi-modes: "window,drun";
 /*	dpi: -1;*/
 /*	threads: 0;*/
 /*	scroll-method: 0;*/
-/*	window-format: "{w}    {c}   {t}";*/
+window-format: "{c} {t}";
 /*	click-to-exit: true;*/
 /*	max-history-size: 25;*/
 /*	combi-hide-mode-prefix: false;*/
-/*	combi-display-format: "{mode} {text}";*/
+combi-display-format: "<span size="xx-large">{mode} </span>{text}";
 /*	matching-negate-char: '-' /* unsupported */;*/
 /*	cache-dir: ;*/
 /*	window-thumbnail: false;*/
@@ -56,12 +56,12 @@ combi-modes: "window,drun";
 /*	refilter-timeout-limit: 8192;*/
 /*	xserver-i300-workaround: false;*/
 /*	pid: "/run/user/1000/rofi.pid";*/
-display-window: "Windows";
+display-window: "";
 /*	display-windowcd: ;*/
 /*	display-run: ;*/
 /*	display-ssh: ;*/
-display-drun: "Applications";
-/*	display-combi: ;*/
+display-drun: "";
+display-combi: "Windows and Applications";
 /*	display-keys: ;*/
 /*	display-filebrowser: ;*/
 /*	kb-primary-paste: "Control+V,Shift+Insert";*/
