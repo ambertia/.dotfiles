@@ -23,7 +23,7 @@ inputbar {
 
 listview {
     fixed-height: true;
-    lines: 10;
+    lines: 12;
     padding: 10px;
     spacing: 2px;
     scrollbar: true;
@@ -32,6 +32,10 @@ listview {
 element {
     border-radius: 20px;
     padding: 5px;
+}
+
+element.normal.active {
+    background-color: @selected-active-background;
 }
 
 element-text {

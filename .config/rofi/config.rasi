@@ -1,6 +1,6 @@
 configuration {
 modes: "window,drun,run,combi";
-font: "Iosevka NF 16";
+font: "Iosevka NF Bold 14";
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
@@ -44,7 +44,7 @@ window-format: "{c} {t}";
 /*	click-to-exit: true;*/
 /*	max-history-size: 25;*/
 /*	combi-hide-mode-prefix: false;*/
-combi-display-format: "<span size="xx-large">{mode} </span>{text}";
+combi-display-format: "<span size="x-large">{mode}  </span>{text}";
 /*	matching-negate-char: '-' /* unsupported */;*/
 /*	cache-dir: ;*/
 /*	window-thumbnail: false;*/

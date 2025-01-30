@@ -5,13 +5,6 @@ configuration {
 
 @theme "~/.config/rofi/custom.rasi"
 
-* {
-}
-
-window {
-    width: 700px;
-}
-
 listview {
     columns: 3;
     spacing: 10px;
