@@ -23,7 +23,7 @@ cp $BACKGROUND_PATH $HOME/.backgrounds/current-wallpaper
 # Change background
 swww img $BACKGROUND_PATH
 # Generate palette
-wal -i $BACKGROUND_PATH --cols16 -n --contrast 2 -a 50
+wal -i $BACKGROUND_PATH --cols16 -n --contrast 3 -a 50
 # Run script to apply pywal theme to Mako notifications
 ~/.scripts/update-mako-theme.sh
 # Prevent duplicate waybar instances from modifications to hyprland.conf colors
