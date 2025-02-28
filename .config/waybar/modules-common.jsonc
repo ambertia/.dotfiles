@@ -70,7 +70,8 @@
         "format-plugged": "{icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["󰂎", "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        // First three format-icons are duplicated for personal preference
+        "format-icons": ["󰂎", "󰂎", "󰁺", "󰁺", "󰁻", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
         "interval": 2
     },
 
