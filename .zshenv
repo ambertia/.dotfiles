@@ -2,3 +2,4 @@
 hdg() {
     ~/.scripts/format_heading.sh  $@
 }
+. "$HOME/.cargo/env"
