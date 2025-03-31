@@ -84,20 +84,24 @@ cl() {
 fman() {
     man $1 | grep -irn $2 -
 }
+
+# Git-related
 gits() {
     git status
 }
 gd() {
     git diff $@
 }
-# Gitmoji alias
 gm() {
     gitmoji commit
 }
-# Commit alias
 gc() {
     git commit $@
 }
+gg() {
+    lazygit $@
+}
+
 # Use default vscode command as an alias for vscodium
 code() {
     vscodium .
