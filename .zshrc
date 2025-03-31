@@ -48,10 +48,10 @@ SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/amber/.zshrc'
+# zstyle :compinstall filename '/home/amber/.zshrc'
 
-autoload -Uz compinit
-compinit
+# autoload -Uz compinit
+# compinit
 # End of lines added by compinstall
 # --------------------------------------------------------------------
 
@@ -70,15 +70,10 @@ compinit
 source ~/.cache/wal/colors-tty.sh
 # --------------------------------------------------------------------
 
-
 # Enable syntax highlighting and autosuggestions
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# Bind Tab to accept next token of autosuggestion
-# ! This is broken - probably the fzf tab keybinding? I'd like to have both on tab to be honest.
-bindkey '\t' forward-word
-
+source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # -------------------------- custom aliases --------------------------
 # Change directory and list contents
