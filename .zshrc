@@ -12,7 +12,7 @@
 # This makes the prompt jump when using p10k instant prompt. I don't mind
 # because it's fast enough that if I know what I'm typing when I open the
 # terminal I've only typed a character or two.
-if [[ $TERM == "xterm-kitty" ]]; then
+if [[ $TERM_PROGRAM != "vscode" ]]; then
     hyfetch --ascii-file ~/.config/arch-dots-text \
         -p $(shuf -e -n 1 \
         transgender \
