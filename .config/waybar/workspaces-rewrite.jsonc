@@ -71,6 +71,7 @@
 
             "title<.*youtube.*>": "󰗃",
             "title<nvim.*>": "",
+            "title<gg>": "",
             "title<lazygit.*>": "",
             "title<man.*>": "󱓷",
         }
