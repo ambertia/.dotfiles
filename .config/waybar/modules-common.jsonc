@@ -226,6 +226,12 @@
         "tooltip-format": "Qalculate GTK"
     },
 
+    "custom/weather": {
+        "exec": "~/.scripts/waybar-wttr.sh",
+        "interval": 900,
+        "return-type": "json",
+    },
+
     //----------------------------------------------------------------
     // Hardware monitors
     //----------------------------------------------------------------

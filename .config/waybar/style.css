@@ -61,6 +61,7 @@ label:focus {
 #custom-power,
 #custom-qalculate,
 #custom-updates,
+#custom-weather,
 #custom-wlogout,
 #disk,
 #idle_inhibitor,
@@ -223,6 +224,16 @@ MODULE SETTINGS - General informational widgets / system control
 
 #wireplumber.muted {
     color: @red-sharp;
+}
+
+/*--------------------------------------------------------------------
+MODULE SETTINGS - Utility Modules
+--------------------------------------------------------------------*/
+
+/* The color emojis for weather have weird alignment/spacing. I decided to put
+the weather emoji to the right of temperature and eliminate right padding.*/
+#custom-weather {
+    padding-right: 0px;
 }
 
 /*--------------------------------------------------------------------

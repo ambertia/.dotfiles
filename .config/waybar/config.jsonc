@@ -41,6 +41,7 @@
     ],
 
     "modules-right": [
+        "custom/weather",
         "idle_inhibitor",
         "custom/updates",
         "wireplumber",
