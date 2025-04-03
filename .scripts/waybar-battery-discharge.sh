@@ -58,9 +58,9 @@ percentage=$(( $power_now / $(( $power_max / 100 )) ))
 # CONDITIONAL FORMATTING
 #---------------------------------------------------------------------
 
-# Conditionally choose a color for the bar and apply it with a span
-# Using this many CSS classes would majorly clutter the style sheet, but if a
-# span is used the clutter can stay contained in here
+# Conditionally choose a color for the bar and apply it with a style class
+# I tried to use a span to control the color and thus contain the clutter in
+# this file, but manually coloring the span overrides the on-hover styling
 if [ $percentage -le 25 ]; then
     if [ "$battery_status" = "Discharging" ]; then
         STYLE_CLASS="discharging-low"
