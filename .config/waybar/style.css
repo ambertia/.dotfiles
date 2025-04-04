@@ -77,7 +77,7 @@ label:focus {
 #temperature,
 #tray,
 #wireplumber {
-    padding: 0 5px;
+    padding: 0 3px;
     color: #ffffff;
 }
 
@@ -128,7 +128,7 @@ MODULE SETTINGS - General informational widgets / system control
 --------------------------------------------------------------------*/
 
 #battery {
-    padding: 3px;
+    padding: 1px;
 }
 
 #battery.warning {
