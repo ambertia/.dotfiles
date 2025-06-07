@@ -1,4 +1,5 @@
 .backgrounds/**/*.jpg
 .backgrounds/**/*.png
+.backgrounds/**/*.svg
 *.bak
 .backgrounds/current-wallpaper
