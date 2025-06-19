@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Variables to control various styling options
-HIDDEN_THRESHOLD=20
-YELLOW_THRESHOLD=50
-RED_THRESHOLD=100
+HIDDEN_THRESHOLD=50
+YELLOW_THRESHOLD=100
+RED_THRESHOLD=200
 SYMBOL=" "
 
 REPO_UPDATES=$(checkupdates | wc -l)
