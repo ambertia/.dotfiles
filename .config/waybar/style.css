@@ -216,6 +216,13 @@ MODULE SETTINGS - General informational widgets / system control
     background-color: @red-soft;
 }
 
+#updates.yellow {
+    color: gold;
+}
+#updates.red {
+    color: @red-soft;
+}
+
 #wireplumber {
     transition: color .25s;
     background-color: transparent;
