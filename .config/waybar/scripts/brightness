@@ -31,23 +31,6 @@ get_backlight() {
 	echo "${LIGHT}%"
 }
 
-# Get icons
-get_icon() {
-	backlight="$(brightnessctl g)"
-	current="${backlight%%%}"
-	if [[ ("$current" -ge "0") && ("$current" -le "52") ]]; then
-		icon="$iDIR/brightness-20.png"
-	elif [[ ("$current" -ge "52") && ("$current" -le "103") ]]; then
-		icon="$iDIR/brightness-40.png"
-	elif [[ ("$current" -ge "103") && ("$current" -le "155") ]]; then
-		icon="$iDIR/brightness-60.png"
-	elif [[ ("$current" -ge "155") && ("$current" -le "207") ]]; then
-		icon="$iDIR/brightness-80.png"
-	elif [[ ("$current" -ge "180") && ("$current" -le "255") ]]; then
-		icon="$iDIR/brightness-100.png"
-	fi
-}
-
 # Get the numeric brightness (0 - 65535) from an integer percentage, with primitive rounding
 get_numeric() {
 	local intermediate=$(( $1 * 65535 ))
@@ -60,11 +43,6 @@ get_percentage() {
 	local intermediate=$(( $1 * 100 ))
 	local base_value=$(( $intermediate / 65535 ))
 	echo $(( $base_value + (($intermediate % 65535 ) / 32768) ))
-}
-
-# Notify
-notify_user() {
-	notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -t 4000 -i "$icon" "Brightness : $(brightnessctl g)"
 }
 
 # Increase brightness
