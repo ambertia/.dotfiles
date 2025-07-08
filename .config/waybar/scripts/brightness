@@ -48,9 +48,9 @@ get_icon() {
 	fi
 }
 
-# Get the numeric brightness (0 - 255) from an integer percentage, with primitive rounding
+# Get the numeric brightness (0 - 65535) from an integer percentage, with primitive rounding
 get_numeric() {
-	local intermediate=$(( $1 * 255 ))
+	local intermediate=$(( $1 * 65535 ))
 	local base_value=$(( $intermediate / 100 ))
 	echo $(( $base_value + (($intermediate % 100 ) / 50) ))
 }
@@ -58,8 +58,8 @@ get_numeric() {
 # Get the integer percentage brightness (0 - 100) from a numeric brightness, with primitive rounding
 get_percentage() {
 	local intermediate=$(( $1 * 100 ))
-	local base_value=$(( $intermediate / 255 ))
-	echo $(( $base_value + (($intermediate % 255 ) / 128) ))
+	local base_value=$(( $intermediate / 65535 ))
+	echo $(( $base_value + (($intermediate % 65535 ) / 32768) ))
 }
 
 # Notify
@@ -72,8 +72,8 @@ inc_backlight() {
 	local current=$(brightnessctl g)
 	local toPct=$(get_percentage $current)
 	local toNum=$(get_numeric $(( $toPct + $INCREMENT )))
-	if [[ "$toNum" -gt "255" ]]; then
-		toNum=255
+	if [[ "$toNum" -gt "65535" ]]; then
+		toNum=65535
 	fi
 	brightnessctl set $toNum # && get_icon && notify_user
 }
