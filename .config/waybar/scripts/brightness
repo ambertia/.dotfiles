@@ -22,7 +22,6 @@
 # to monitor brightness as a percentage.
 #---------------------------------------------------------------------
 
-iDIR="$HOME/.config/HyprV/mako/icons"
 # Backlight increment in percentage
 INCREMENT=5
 
