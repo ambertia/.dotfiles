@@ -25,6 +25,7 @@ return {
           -- you can add other fields for setting up lsp server in this table
         }
       end
+      vim.cmd 'hi Folded guibg=None'
       require('ufo').setup {
         open_fold_hl_timeout = 0,
       }
