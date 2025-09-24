@@ -11,7 +11,7 @@ voltage_now=$(( $(cat /sys/class/power_supply/BAT1/voltage_now) / 1000 ))
 current_now=$(( $(cat /sys/class/power_supply/BAT1/current_now) / 1000 ))
 
 # Calculate power in uW
-power_now=$(( -1 * $voltage_now * $current_now ))
+power_now=$(( $voltage_now * $current_now ))
 
 # Get battery state from the kernel
 battery_status=$(cat /sys/class/power_supply/BAT1/status)
